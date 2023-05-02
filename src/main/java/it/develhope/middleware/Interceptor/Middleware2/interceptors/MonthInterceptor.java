@@ -40,7 +40,7 @@ public class MonthInterceptor implements HandlerInterceptor {
             }).findFirst();
 
             if (month.isPresent()) {
-                request.setAttribute("month", month.get());
+                request.setAttribute("MonthInterceptor-month", month.get());
             } else {
                 Month emptyMonth = new Month();
                 emptyMonth.setEnglishName("nope");
